@@ -3,3 +3,4 @@ target
 bin
 .classpath
 org.eclipse.*.prefs
+org.eclipse.*.xml
