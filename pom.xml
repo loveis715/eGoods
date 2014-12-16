@@ -10,6 +10,7 @@
 
    <modules>
       <module>core</module>
+      <module>tools</module>
    </modules>
 
    <properties>
@@ -23,6 +24,8 @@
       <log4j.version>1.2.14</log4j.version>
       <junit.version>4.9</junit.version>
       <commons.dbcp.version>1.4</commons.dbcp.version>
+      <commons.io.version>2.4</commons.io.version>
       <postgresql.version>9.0-801.jdbc4</postgresql.version>
+      <dbunit.version>2.4.8</dbunit.version>
    </properties>
 </project>

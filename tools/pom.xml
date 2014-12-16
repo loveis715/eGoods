@@ -7,14 +7,12 @@
       <version>${egoods.version}</version>
    </parent>
 
-   <artifactId>egoods-core</artifactId>
+   <artifactId>egoods-tools</artifactId>
    <packaging>pom</packaging>
-   <name>eGoods Core</name>
+   <name>eGoods Tools</name>
 
    <modules>
-      <module>dal</module>
-      <module>service</module>
-      <module>rest-service</module>
-      <module>test</module>
+      <module>db-init</module>
+      <module>db-init-data</module>
    </modules>
 </project>

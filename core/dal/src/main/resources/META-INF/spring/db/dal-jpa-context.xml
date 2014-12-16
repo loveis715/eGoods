@@ -9,10 +9,10 @@
                            http://www.springframework.org/schema/data/jpa
                            http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
                            http://www.springframework.org/schema/util
-                           http://www.springframework.org/schema/util/spring-util-3.1.xsd">
+                           http://www.springframework.org/schema/util/spring-util.xsd">
 
     <jpa:repositories base-package="com.ambergarden.egoods.orm.repository"/>
-    
+
     <bean id="entityManagerFactory"
           class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
           p:dataSource-ref="dataSource"
@@ -49,17 +49,4 @@
                   p:scripts-ref="databaseScriptsList" />
         </property>
     </bean>
-    
-    <bean id="dataSource"
-          class="org.apache.commons.dbcp.BasicDataSource"
-          destroy-method="close">
-        <property name="driverClassName" value="org.postgresql.Driver" />
-        <property name="url" value="jdbc:postgresql://localhost:5432/egoods" />
-        <property name="username" value="egoods" />
-        <property name="password" value="egoods" />
-        <property name="maxActive" value="100" />
-        <property name="timeBetweenEvictionRunsMillis" value="60000" />
-    </bean>
-    
-    <util:list id="databaseScriptsList" value-type="org.springframework.core.io.Resource" />
 </beans>

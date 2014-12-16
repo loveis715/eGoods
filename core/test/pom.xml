@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+   <parent>
+      <groupId>com.ambergarden.egoods</groupId>
+      <artifactId>egoods-core</artifactId>
+      <version>${egoods.version}</version>
+   </parent>
+
+   <groupId>com.ambergarden.egoods.core</groupId>
+   <artifactId>test</artifactId>
+   <packaging>jar</packaging>
+   <name>Test</name>
+   <description>
+      Project contains support classes for testing.
+   </description>
+   
+   <dependencies>
+      <dependency>
+         <groupId>org.dbunit</groupId>
+         <artifactId>dbunit</artifactId>
+         <version>${dbunit.version}</version>
+      </dependency>
+      <dependency>
+         <groupId>org.springframework</groupId>
+         <artifactId>spring-context</artifactId>
+         <version>${spring.version}</version>
+      </dependency>
+      <dependency>
+         <groupId>org.springframework</groupId>
+         <artifactId>spring-jdbc</artifactId>
+         <version>${spring.version}</version>
+      </dependency>
+      <dependency>
+         <groupId>commons-io</groupId>
+         <artifactId>commons-io</artifactId>
+         <version>${commons.io.version}</version>
+      </dependency>
+   </dependencies>
+
+   <build>
+      <pluginManagement>
+         <plugins>
+            <!--This plugin's configuration is used to store Eclipse m2e 
+               settings only. It has no influence on the Maven build itself. -->
+            <plugin>
+               <groupId>org.eclipse.m2e</groupId>
+               <artifactId>lifecycle-mapping</artifactId>
+               <version>1.0.0</version>
+            </plugin>
+         </plugins>
+      </pluginManagement>
+   </build>
+</project>
