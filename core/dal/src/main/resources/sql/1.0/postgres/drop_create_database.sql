@@ -1,5 +1,6 @@
 -- The database has to be dropped first
 drop database egoods;
+drop database test;
 
 -- The login can now be dropped and recreated
 drop user egoods;
@@ -14,3 +15,4 @@ ALTER ROLE egoods WITH ENCRYPTED PASSWORD 'egoods' VALID UNTIL 'infinity';
 ALTER Role egoods CREATEDB;
 
 create database egoods;
+create database test;

@@ -15,12 +15,31 @@ then
    exit $result
 fi
 
+temp_dir="generated"
+if [ ! -d "$temp_dir" ]
+then
+    mkdir "$temp_dir"
+fi
+
 export PGPASSWORD=egoods
-$PSQL -U egoods -f ../../core/dal/src/main/resources/sql/1.0/postgres/schema.sql
+
+generate-sql.sh $temp_dir egoods
+$PSQL -U egoods -f $temp_dir/egoods.sql
 result=$?
 if [ $result -ne 0 ]
 then
-   echo "Schema creation script unsuccessful: " $result
+   echo "Schema recreation script unsuccessful: " $result
    exit $result
 fi
+rm $temp_dir/egoods.sql
 
+generate-sql.sh $temp_dir test
+$PSQL -U egoods -f $temp_dir/test.sql
+result=$?
+if [ $result -ne 0 ]
+then
+   echo "Schema recreation script unsuccessful: " $result
+   exit $result
+fi
+rm $temp_dir/test.sql
+rmdir "$temp_dir"

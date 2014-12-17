@@ -1,5 +1,3 @@
-\c egoods egoods
-
 CREATE TABLE CATEGORY
 (
 ID SERIAL NOT NULL,

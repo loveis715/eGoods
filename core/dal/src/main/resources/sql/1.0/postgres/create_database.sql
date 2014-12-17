@@ -11,3 +11,4 @@ ALTER Role egoods CREATEDB;
 
 --drop database egoods;
 create database egoods;
+create database test;
